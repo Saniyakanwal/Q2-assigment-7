@@ -1,9 +1,20 @@
 'use client'
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default  function Products() {
-    const [products, setProducts] = useState<any[]>([]);
+
+    interface Product {
+        id: number;
+        title: string;
+        price: number;
+        description: string;
+        category: string;
+        image: string;
+      }
+      
+    const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
 
 
@@ -32,7 +43,7 @@ export default  function Products() {
                         key={product.id}
                         className="bg-white p-4 rounded-lg shadow hover:shadow-xl"
                         >
-                        <img 
+                        <Image 
                         src={product.image} 
                         alt={product.title} 
                         className="w-full h-40 object-contain mb-4"
