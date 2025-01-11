@@ -12,14 +12,14 @@ const Home = () => {
       alt='image'
       width={600}
       height={700}
-      className=' mt-14 md:mt-36  w-full md:ml-24'
+      className=' mt-14 md:mt-36   md:ml-24'
       />
       <Image 
       src="/Images/img.jpg"
       alt='img'
       width={500}
       height={200}
-      className=' mt-7 md:mt-14  w-full md:ml-16'
+      className=' mt-7 md:mt-14   md:ml-16'
       />
     </div>
   </div>
